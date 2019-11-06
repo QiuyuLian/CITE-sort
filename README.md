@@ -1,3 +1,3 @@
-# matryoshka
+# CITEsort
 
-python matryoshka_open.py <data_path>
+python CITEsort.py <data_path>
