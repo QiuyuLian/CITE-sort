@@ -1,26 +1,16 @@
 # CITE-sort
 
-CITE-sort is an interpretable clustering framework for CITE-seq datasets based on recursive Gaussian Mixture Model. 
+A new computational framework for auto-gating and robust segregation of artificial cell types in CITE-seq.
 
 ## Description
 
-CITE-sort conducts auto-gating with CITE-seq ADT data. It is robust against artificial cell types that stem from multiplets. CITE-sort also generates biologically meaningful interpretations to its clustering results by constructing a Single Cell Taxonomy tree (Below shows an eaxmple result).
-
-<img src="readme_figs/taxonomy.png" alt="taxonomy" style="zoom:80%;" />
-
-We call cell types that truly exist as *biological cell types* (BCT) and cell types created by CITE-seq multiplets as *artificial cell types* (ACT).   ACTs induce high imbalance of both cluster sizes and clustering coefficients. It seriously influence the performance and efficienty of in clustering. 
-
-![imbalance](readme_figs/ACTimbalance.png)
-
-CITE-sort addresses this problem by transforming the original high-dimensional, highly imbalanced, many-class clustering problem into solving multiple low-dimensional, fewer-class clustering sub-problems.   
-
-![FittingInLowDimension](readme_figs/FittingInLowDimension.png)
+CITE-sort conducts auto-gating with CITE-seq ADT data using recursive Gaussian Mixture Model. It is robust against artificial cell types that stem from multiplets. CITE-sort also provides concrete explanations of its internal decision process by constructing a biologically meaningful Single Cell Taxonomy tree.  
 
 ## Usage
 
 ### Input
 
-The input of CITE-sort should be a .csv file with CLR normalized CITE-seq ADT data (row: droplet/sample, col: ADT/feature). 
+The input of CITE-sort should be a csv file with CLR normalized CITE-seq ADT data (row: droplet/sample, col: ADT/feature). 
 
 ### Run
 
@@ -38,18 +28,16 @@ The input of CITE-sort should be a .csv file with CLR normalized CITE-seq ADT da
 
 ## Examples
 
-We provide four ADT datasets with CLR normalization from 10x:
+We provide 4 public CITE-seq datasets as examples in "./data_10x":
 
 - [10k PBMCs from a healthy donor](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/pbmc_10k_protein_v3) 
 - [10k cells from a MALT tumor](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/malt_10k_protein_v3)
 - [5k PBMCs from a healthy donor (next GEM)](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.2/5k_pbmc_protein_v3_nextgem)
 - [5k PBMCs from a healthy donor (v3 chemistry)](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.2/5k_pbmc_protein_v3)
 
-We show the Single Cell Taxonomy tree The 10k PBMCs after running CITE-sort with default parameters. 
-
 ### Example Commond
 
-The 10k PBMCs ADT dataset is used as example. 
+The 10k PBMCs dataset is used as example. 
 
 `python CITEsort.py ./data_10x/ADT_10k_PBMC_normalized.csv -o ./10x_10k_PBMC `
 
