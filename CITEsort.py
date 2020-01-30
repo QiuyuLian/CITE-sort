@@ -13,6 +13,7 @@ from BTreeTraversal import BTreeTraversal
 import pickle
 import argparse
 import os
+from ReSplit import ReSplit
 
 #from sys import argv
 
@@ -41,7 +42,8 @@ def main():
         merge_cutoff = 0.1
     
     data = pd.read_csv(data_path,header = 0, index_col=0)
-    tree = Matryoshka(data,merge_cutoff)
+    tree = ReSplit(data,merge_cutoff)
+    #tree = Matryoshka(data,merge_cutoff)
     visualize_tree(tree,data,output_path,'tree')
     
     f = open(output_path+'/tree.pickle','wb')

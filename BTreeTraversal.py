@@ -20,7 +20,7 @@ import pdb
 
 class BTreeTraversal:
     
-    def __init__(self,tree,method='bfs',nodelist=None,nodename=None,tree_summary=None,leaf_summary=None):
+    def __init__(self,tree,method='bfs',nodelist=None,nodename=None,tree_summary=None,leaf_summary=None,ll=None,n_components=None):
         
         #print('initializing...')
         
@@ -34,24 +34,31 @@ class BTreeTraversal:
         nodename_temp = ['_'.join(x.key) for x in self.nodelist]
         self.nodename = [str(i)+'_'+nodename_temp[i] for i in range(len(nodename_temp))]
         self.tree_summary, self.leaf_summary = self.summarize()
-         
+        if 'll' in self.tree.__dir__():
+            self.ll = self.leaf_summary['ll'].sum()
+            self.n_components = self.leaf_summary.shape[0]
         
       
     def summarize(self):
-        #print('summarizing...')
-        #num_node = len(self.nodename)
-        tot_cell = len(self.nodelist[0].indices)
-        #markers = list(self.nodelist[0].all_1d_clustering.keys())
-        Count = [len(x.indices) for x in self.nodelist]
-        Proportion = [len(x.indices)/tot_cell for x in self.nodelist]
-        
-        tree_summary = pd.DataFrame({'Count':Count,'Proportion':Proportion},index=self.nodename)
+        if 'll' in self.tree.__dir__():
+            tree_summary = pd.DataFrame({'Count':[len(x.indices) for x in self.nodelist],
+                                         'Weight':[x.weight for x in self.nodelist],
+                                         'Stop':[x.stop for x in self.nodelist],
+                                         'll':[x.ll for x in self.nodelist]
+                                         },index=self.nodename)
+        else:
+            tree_summary = pd.DataFrame({'Count':[len(x.indices) for x in self.nodelist] },index=self.nodename)  
 
         leaf_summary = tree_summary.loc[[x for x in self.nodename if x.split('_')[1]=='leaf'],:]
         leaf_summary = leaf_summary.sort_values(by='Count',ascending=False)
         
         return tree_summary,leaf_summary
     
+    
+    
+    def get_ll(self):
+        
+        self.ll_tot = sum([x.ll for idx,x in enumerate(self.nodelist) if self.nodename[idx].split('_')[1]=='leaf'])
     
     
     def get_node(self,nodeID):

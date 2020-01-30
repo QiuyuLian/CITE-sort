@@ -8,17 +8,20 @@ Created on Sun Aug 18 15:41:14 2019
 
 class BTree:
 
-    def __init__(self, key, left = None, right = None, indices = None, \
-                 all_clustering_dic = None, where_dominant = None):
+    def __init__(self, key, left = None, right = None, indices = None, stop=None,\
+                 all_clustering_dic = None, where_dominant = None,weight=None,ll=None,bic=None):
         self.key = key # a str
         self.right = right # a BstNode
         self.left = left # a BstNode
         self.indices = indices # a []
         self.all_clustering_dic = all_clustering_dic
+        self.weight = weight
+        self.ll = ll
+        self.bic = bic
         #self.marker_summary = marker_summary # a pd.df
         #self.para = para # a {} parameters for qualified components
         self.where_dominant = where_dominant # str ("left"/"right"), indicator of edge color
-        #self.stop = stop # legacy
+        self.stop = stop # legacy
             
     
     def display(self):
