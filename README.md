@@ -1,12 +1,12 @@
 # CITE-sort
 
-A new computational framework for auto-gating and robust segregation of artificial cell types in CITE-seq.
+An artificial-type-aware surface marker clustering method for CITE-seq data. 
 
 ## Description
 
-CITE-sort conducts auto-gating with CITE-seq ADT data using recursive Gaussian Mixture Model. It is robust against artificial cell types that stem from multiplets. CITE-sort also provides concrete explanations of its internal decision process by constructing a biologically meaningful Single Cell Taxonomy tree.  
+CITE-sort conducts auto-gating with CITE-seq ADT data using recursive Gaussian Mixture Model. It is robust against artificial cell types that stem from multiplets. CITE-sort also provides concrete explanations of its internal decision process by constructing a biologically meaningful sort tree.  
 
-Below shows an example Single Cell Taxonomy tree constructed by CITE-sort from an in-house PBMC dataset. Each node represents a subpopulation. The title of each inner node represents the selected surface markers subspace. Red and blue colors represent the two component complexes for subdivision. Edges are colored according to their corresponding component complexes. Leaf nodes are hand-curated and are annotated with domain knowledge. Cell types that should not exist are labeled as suspect _artificial cell type_ (ACT) clusters. Suspect ACT clusters are characterized by their population percentages in the overall dataset (denoted by ‘prop’) and their multi-sample multiplets percentages (denoted by ‘MSM’). Abbreviations: iNK: intermediate NK cells; mNK: vast majority of NK cells; C-mono: classical monocytes; NC-mono: non-classical monocytes; mDC: myeloid DC; DNT: double negative T cells.
+Below shows an example of sort tree constructed by CITE-sort from an in-house PBMC dataset. Each node represents a subpopulation. The title of each inner node represents the selected surface markers subspace. Red and blue colors represent the two component complexes for subdivision. Edges are colored according to their corresponding component complexes. Leaf nodes are hand-curated and are annotated with domain knowledge. Cell types that should not exist are labeled as suspect _artificial cell type_ (ACT) clusters. Suspect ACT clusters are characterized by their population percentages in the overall dataset (denoted by ‘prop’) and their multi-sample multiplets percentages (denoted by ‘MSM’). Abbreviations: iNK: intermediate NK cells; mNK: vast majority of NK cells; C-mono: classical monocytes; NC-mono: non-classical monocytes; mDC: myeloid DC; DNT: double negative T cells.
 
 <img src="readme_figs/taxonomy.png" alt="taxonomy" style="zoom:67%;" />
 
@@ -25,29 +25,33 @@ The input of CITE-sort should be a csv file with CLR normalized CITE-seq ADT dat
 
 ### Outputs
 
-- tree.pdf, the vasualized Single Cell Taxonomy tree of input dataset created by CITE-sort.
-- leaf_labels.csv, the labels of each droplets in Single Cell Taxonomy tree.
+- tree.pdf, the vasualized sort tree of input dataset created by CITE-sort.
+- leaf_labels.csv, the labels of each droplets in the sort tree.
 - tree.pickle, the tree structure recording the main clusteirng infromation of input dataset.
 - tree.dot, the auxiliary file to plot the tree.
 
 ## Examples
 
-We provide 4 public CITE-seq datasets as examples in "./data_10x":
+We provide 3 in-house and 5 public CITE-seq datasets in "./datasets":
 
-- [10k PBMCs from a healthy donor](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/pbmc_10k_protein_v3) 
-- [10k cells from a MALT tumor](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/malt_10k_protein_v3)
-- [5k PBMCs from a healthy donor (next GEM)](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.2/5k_pbmc_protein_v3_nextgem)
-- [5k PBMCs from a healthy donor (v3 chemistry)](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.2/5k_pbmc_protein_v3)
+- [PBMC_1k (10X Genomics)](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/pbmc_1k_protein_v3)
+- PBMC_1k_b (In house)
+- PBMC_2k (In house)
+- [PBMC_5k (10X Genomics)](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.2/5k_pbmc_protein_v3)
+- [PBMC_8k (10X Genomics)](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/pbmc_10k_protein_v3) 
+- [MALT_8k (10X Genomics)](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/malt_10k_protein_v3)
+- [CBMC_8k (GSE100866)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE100866)
+- PBMC_16k (with cell hashing) (In house)
 
 ### Example Commond
 
-The 10k PBMCs dataset is used as example. 
+The PBMC_2k dataset is used as example. 
 
-`python CITEsort.py ./data_10x/ADT_10k_PBMC_normalized.csv -o ./10x_10k_PBMC `
+`python CITEsort.py ./datasets/PBMC_2k_ADT_clr.csv -o ./CITEsort_out `
 
 ## Authors
 
-Qiuyu Lian\*, Hongyi Xin\*, Jianzhu Ma, Yanda Li, Liza Konnikova, Wei Chen\#, Jin Gu\#,Kong Chen\#
+Qiuyu Lian\*, Hongyi Xin\*, Jianzhu Ma, Liza Konnikova, Wei Chen\#, Jin Gu\#,Kong Chen\#
 
 ## Maintainer
 
