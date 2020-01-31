@@ -1,6 +1,6 @@
 # CITE-sort
 
-An artificial-type-aware surface marker clustering method for CITE-seq data. 
+An artificial-cell-type aware surface marker clustering method for CITE-seq data. 
 
 ## Description
 
