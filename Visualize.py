@@ -12,12 +12,15 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy import stats
 import pandas as pd
+import matplotlib
 
 #node = traversal.get_node(0)
 #nodename = traversal.nodename[0]
 
 def visualize_node(data,node,nodename,**plot_para):
     
+    #matplotlib.rcParams['figure.dpi'] = 200
+
     # plot_para: savefig, outpath, 
     savefig = plot_para.get('savefig',False)
     savepath = plot_para.get('savepath','.')
@@ -26,7 +29,7 @@ def visualize_node(data,node,nodename,**plot_para):
     current_indices = node.indices
     node_data = data.loc[current_indices,:]
     
-    plt.figure(figsize=(12,((data.shape[1]-1)//5+1)*2), dpi=96)
+    plt.figure(figsize=(12,((data.shape[1]-1)//5+1)*2), dpi=70)
     plt.style.use('seaborn-white')
     #ax.tick_params(axis='both', which='major', labelsize=10)
 
@@ -88,7 +91,7 @@ def visualize_node(data,node,nodename,**plot_para):
     
     plt.subplots_adjust(top=0.9, bottom=0.1, left=0.1, right=0.9, hspace=0.4,wspace=0.45)
     plt.suptitle(nodename+' | '+str(len(current_indices))+' cells',fontsize=15,color="darkblue")
-    plt.subplots_adjust(top=0.8)
+    plt.subplots_adjust(top=0.85)
     #plt.savefig(savepath+'/visualize_node.png')
     if savefig == True:
         plt.savefig(savepath+'/'+savename+'_'+nodename+'.png') 
@@ -164,7 +167,6 @@ def visualize_pair(data,node,nodename,**plot_para):
 from subprocess import call
 #from IPython.display import Image
 #import pandas as pd
-import matplotlib
 #import numpy as np
 
 def visualize_tree(root,data,outpath,filename):
@@ -234,7 +236,7 @@ def visualize_tree(root,data,outpath,filename):
             if node.left.key == ('leaf',):
                 # left leaf node        
                 temp = (mean_temp - means_in_root)/stds_in_root
-                offset_in_leaf = '\n' + markers[0]+': '+str(round(temp[markers[0]],2))+')'
+                offset_in_leaf = '\n' + markers[0]+': '+str(round(temp[markers[0]],2))
                 for k in range(1,len(markers)):
                     offset_in_leaf = offset_in_leaf + '\n' + markers[k]+': '+ str(round(temp[markers[k]],2))
                 

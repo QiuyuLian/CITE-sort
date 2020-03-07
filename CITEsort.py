@@ -52,7 +52,7 @@ def main():
     
     traversal = BTreeTraversal(tree)
     leaves_labels = traversal.get_leaf_label()
-    leaves_labels.to_csv(output_path + '/leaf_labels.csv')
+    leaves_labels.to_csv(output_path + '/leaf_labels.csv',index=False)
 
 
 if __name__ == "__main__":

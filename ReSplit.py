@@ -128,9 +128,13 @@ def HiScanFeatures(data,root,merge_cutoff,max_k,max_ndim,bic):
             val = all_clustering_dic[ndim][item]['similarity_stopped']
             if val > 0.1 and val < 0.5:
                 rescan_features.append(item[0])
-                
+        
         for ndim in range(2,max_ndim+1):
-            separable_features, bipartitions, scores,bic_list, all_clustering_dic[ndim] = ScoreFeatures(data[rescan_features],root,merge_cutoff,max_k,ndim,bic)
+            if len(rescan_features) < ndim:
+                separable_features, bipartitions, scores, bic_list, all_clustering_dic[ndim] = ScoreFeatures(data,root,0.5,max_k,len(rescan_features),bic)
+                break
+            
+            separable_features, bipartitions, scores,bic_list, all_clustering_dic[ndim] = ScoreFeatures(data[rescan_features],root,0.5,max_k,ndim,bic)
             if len(separable_features) >= 1:
                 break
         
