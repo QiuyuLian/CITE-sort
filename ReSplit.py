@@ -20,7 +20,7 @@ import copy
 #import pandas as pd
 
 
-def ReSplit(data,merge_cutoff=0.1,weight=1,max_k=5,max_ndim=2,bic='bic'):
+def ReSplit(data,merge_cutoff=0.1,weight=1,max_k=10,max_ndim=2,bic='bic'):
     
     root = BTree(('leaf',))
     root.indices = data.index.values.tolist()

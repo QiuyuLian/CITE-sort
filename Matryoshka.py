@@ -12,7 +12,7 @@ import copy
 #import pandas as pd
 
 
-def Matryoshka(data,merge_cutoff=0.1,max_k=5,max_ndim=2,bic='bic'):
+def Matryoshka(data,merge_cutoff=0.1,max_k=10,max_ndim=2,bic='bic'):
     
     if data.shape[0] <= 20:
         root = BTree(('leaf',))
