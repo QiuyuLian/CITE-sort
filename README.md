@@ -32,6 +32,11 @@ See analysis [tutorial](https://github.com/QiuyuLian/CITE-sort/blob/master/Analy
 ### Outputs
 
 - tree.pdf, the vasualized sort tree of input dataset created by CITE-sort.
+  - There are three rows in each inner node:
+    - "**n_marker(s)**": **n** is the node ID, which is obtained by Breath First Search. **marker(s)**, the surface markers next to the ID, is the subspace selected to subdivide the current population.
+    - "**Num: xxx**": is the number of droplets in current population.
+    - "**(a|b)**": **b** denotes the number of components determined by BIC in the selected surface marker subspace. **a** denotes the number of component-complexes after merging with a certain threshold. Generally, **a** <= **b**. **a** = **b** when all components can not be merged with current threshold.
+  - The numbers next to the arrows denote the mean of the selected markers in the partition the arrow stands for. In leaf nodes, the means of all markers are marked if not using '--compact'. As CITE-sort takes CLR-format values as input, these numbers could be positive or negative. 
 - leaf_labels.csv, the labels of each droplets in the sort tree.
 - tree.pickle, the tree structure recording the main clusteirng infromation of input dataset.
 - tree.dot, the auxiliary file to plot the tree.
