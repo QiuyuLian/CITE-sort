@@ -18,7 +18,7 @@ import sys
 parser = argparse.ArgumentParser()
 parser.add_argument('data_path', help = "The input path of CLR normalized data in .csv files with row as sample, col as feature.")
 parser.add_argument('-o', '--output', type=str, default='./CITEsort_out',help='Path to save output files.')
-parser.add_argument('--CLRTransfer', action='store_true', default=False, help='Input is raw counts. CLRTransfer the input data.')
+parser.add_argument('--CLR', action='store_true', default=False, help='Input is raw counts. Transform counts into CLR format.')
 
 args = parser.parse_args()
 data_path = args.data_path
