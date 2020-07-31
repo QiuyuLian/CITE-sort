@@ -4,6 +4,8 @@ An artificial-cell-type aware surface marker clustering method for CITE-seq data
 
 <img src="readme_figs/CITE-sort.png" width = "35%"   height = "70%"  alt="CITE-sort" align=left />
 
+
+
 ## Description
 
 CITE-sort conducts auto-gating with CITE-seq ADT data using recursive Gaussian Mixture Model. It is robust against artificial cell types that stem from multiplets. CITE-sort also provides concrete explanations of its internal decision process by constructing a biologically meaningful sort tree.  See our [paper](https://academic.oup.com/bioinformatics/article/36/Supplement_1/i542/5870491) for more details. 
