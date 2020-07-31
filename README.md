@@ -2,9 +2,11 @@
 
 An artificial-cell-type aware surface marker clustering method for CITE-seq data. 
 
+<img src="readme_figs/CITE-sort.png" alt="taxonomy" style="float:left;zoom:40%;" />
+
 ## Description
 
-CITE-sort conducts auto-gating with CITE-seq ADT data using recursive Gaussian Mixture Model. It is robust against artificial cell types that stem from multiplets. CITE-sort also provides concrete explanations of its internal decision process by constructing a biologically meaningful sort tree.  See our [manuscript](https://www.biorxiv.org/content/10.1101/2020.01.31.928010v2) for more details. 
+CITE-sort conducts auto-gating with CITE-seq ADT data using recursive Gaussian Mixture Model. It is robust against artificial cell types that stem from multiplets. CITE-sort also provides concrete explanations of its internal decision process by constructing a biologically meaningful sort tree.  See our [paper](https://academic.oup.com/bioinformatics/article/36/Supplement_1/i542/5870491) for more details. 
 
 Below shows an example of sort tree constructed by CITE-sort from an in-house PBMC dataset. Each node represents a subpopulation. The title of each inner node represents the selected surface markers subspace. Red and blue colors represent the two component complexes for subdivision. Edges are colored according to their corresponding component complexes. Leaf nodes are hand-curated and are annotated with domain knowledge. Cell types that should not exist are labeled as suspect _artificial cell type_ (ACT) clusters. Suspect ACT clusters are characterized by their population percentages in the overall dataset (denoted by ‘prop’) and their multi-sample multiplets percentages (denoted by ‘MSM’). Abbreviations: iNK: intermediate NK cells; mNK: vast majority of NK cells; C-mono: classical monocytes; NC-mono: non-classical monocytes; mDC: myeloid DC; DNT: double negative T cells.
 

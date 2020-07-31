@@ -39,7 +39,7 @@ print('read data.')
 data = pd.read_csv(data_path,header=0,index_col=0)
 dataplot = data
 
-if args.CLRTransder:
+if args.CLR:
     print('perform CLR transformation on raw counts.')
     data_clr = np.apply_along_axis(lambda x: np.log(x+1) - np.mean(np.log(x+1)),0,data)
     data_clr = pd.DataFrame(data_clr,index=data.index,columns = data.columns)

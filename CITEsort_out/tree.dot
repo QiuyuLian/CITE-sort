@@ -1,35 +1,33 @@
 digraph Tree {node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;edge [fontname=helvetica] ;0 [label="0_CD64\nNum: 2580\n(2|2)",fillcolor="#ff9966ff",fontsize=25];1 [label="1_CD341\n1313 (50.89%)\n(2|2)",fillcolor="#ffccccff",fontsize=25];0 -> 1 [labeldistance=3, label = "-0.94
-",fontsize=25, color=red, style=bold];2 [label="2_CD361\n1267 (49.11%)\n(1|2)",fillcolor="#ffccccff",fontsize=25];0 -> 2 [labeldistance=3, label = "0.98
-",fontsize=25, color=black, style=solid];3 [label="3_CD3\n298 (11.55%)\n(2|2)",fillcolor="#ffccccff",fontsize=25];1 -> 3 [labeldistance=3, label = "-0.86
+",fontsize=25, color=black, style=solid];2 [label="2_CD361\n1267 (49.11%)\n(1|2)",fillcolor="#ffccccff",fontsize=25];0 -> 2 [labeldistance=3, label = "0.98
+",fontsize=25, color=red, style=bold];3 [label="3_CD3\n298 (11.55%)\n(2|2)",fillcolor="#ffccccff",fontsize=25];1 -> 3 [labeldistance=3, label = "-0.86
 ",fontsize=25, color=black, style=solid];4 [label="4_leaf\n1015 (39.34%)\n",fillcolor="#006b2b",fontsize=20];1 -> 4 [labeldistance=3, label = "1.19
-",fontsize=25, color=red, style=bold];5 [label="5_CD56_CD91\n285 (11.05%)\n(3|3)",fillcolor="#ffff99ff",fontsize=25];2 -> 5 [labeldistance=3, label = "-0.24
-",fontsize=25, color=red, style=bold];6 [label="6_leaf\n982 (38.06%)\n",fillcolor="#006c2c",fontsize=20];2 -> 6 [labeldistance=3, label = "1.19
-",fontsize=25, color=black, style=solid];7 [label="7_CD45RA_CD45\n78 (3.02%)\n(3|3)",fillcolor="#ffff99ff",fontsize=25];3 -> 7 [labeldistance=3, label = "-0.36
+",fontsize=25, color=red, style=bold];5 [label="5_CD56_CD91\n299 (11.59%)\n(3|3)",fillcolor="#ffff99ff",fontsize=25];2 -> 5 [labeldistance=3, label = "-0.21
+",fontsize=25, color=black, style=solid];6 [label="6_leaf\n968 (37.52%)\n",fillcolor="#006c2c",fontsize=20];2 -> 6 [labeldistance=3, label = "1.2
+",fontsize=25, color=red, style=bold];7 [label="7_CD45RA_CD45\n78 (3.02%)\n(3|3)",fillcolor="#ffff99ff",fontsize=25];3 -> 7 [labeldistance=3, label = "-0.36
 ",fontsize=25, color=black, style=solid];8 [label="8_CD41\n220 (8.53%)\n(2|2)",fillcolor="#ffccccff",fontsize=25];3 -> 8 [labeldistance=3, label = "2.95
-",fontsize=25, color=red, style=bold];9 [label="9_HLA-DR_CD361\n170 (6.59%)\n(2|2)",fillcolor="#ffff99ff",fontsize=25];5 -> 9 [labeldistance=3, label = "-0.1
+",fontsize=25, color=red, style=bold];9 [label="9_HLA-DR_CD361\n179 (6.94%)\n(3|3)",fillcolor="#ffff99ff",fontsize=25];5 -> 9 [labeldistance=3, label = "-0.1
 -0.24
-",fontsize=25, color=red, style=bold];10 [label="10_CD361_CD91\n115 (4.46%)\n(2|2)",fillcolor="#ffff99ff",fontsize=25];5 -> 10 [labeldistance=3, label = "1.42
+",fontsize=25, color=red, style=bold];10 [label="10_leaf\n120 (4.65%)\n",fillcolor="#46ae60",fontsize=20];5 -> 10 [labeldistance=3, label = "1.41
 0.53
-",fontsize=25, color=black, style=solid];11 [label="11_leaf\n36 (1.4%)\n",fillcolor="#84cc83",fontsize=20];7 -> 11 [labeldistance=3, label = "-0.12
-0.04
-",fontsize=25, color=black, style=solid];12 [label="12_leaf\n42 (1.63%)\n",fillcolor="#7dc87e",fontsize=20];7 -> 12 [labeldistance=3, label = "2.4
-0.66
+",fontsize=25, color=black, style=solid];11 [label="11_leaf\n30 (1.16%)\n",fillcolor="#8dd08a",fontsize=20];7 -> 11 [labeldistance=3, label = "-0.38
+0.13
+",fontsize=25, color=black, style=solid];12 [label="12_leaf\n48 (1.86%)\n",fillcolor="#76c578",fontsize=20];7 -> 12 [labeldistance=3, label = "2.24
+0.52
 ",fontsize=25, color=red, style=bold];13 [label="13_CD45RA\n99 (3.84%)\n(2|2)",fillcolor="#ffccccff",fontsize=25];8 -> 13 [labeldistance=3, label = "-0.76
-",fontsize=25, color=red, style=bold];14 [label="14_CD71\n121 (4.69%)\n(1|2)",fillcolor="#ffccccff",fontsize=25];8 -> 14 [labeldistance=3, label = "2.88
-",fontsize=25, color=black, style=solid];15 [label="15_leaf\n89 (3.45%)\n",fillcolor="#56b567",fontsize=20];9 -> 15 [labeldistance=3, label = "-0.71
--0.05
-",fontsize=25, color=black, style=solid];16 [label="16_CD11b\n81 (3.14%)\n(1|2)",fillcolor="#ffccccff",fontsize=25];9 -> 16 [labeldistance=3, label = "1.13
--0.46
-",fontsize=25, color=red, style=bold];17 [label="17_CD11b\n80 (3.1%)\n(1|2)",fillcolor="#ffccccff",fontsize=25];10 -> 17 [labeldistance=3, label = "-0.25
--0.28
-",fontsize=25, color=black, style=solid];18 [label="18_leaf\n35 (1.36%)\n",fillcolor="#86cc85",fontsize=20];10 -> 18 [labeldistance=3, label = "-0.19
-2.39
-",fontsize=25, color=red, style=bold];19 [label="19_leaf\n40 (1.55%)\n",fillcolor="#7fc97f",fontsize=20];13 -> 19 [labeldistance=3, label = "-0.54
-",fontsize=25, color=black, style=solid];20 [label="20_leaf\n59 (2.29%)\n",fillcolor="#6dc072",fontsize=20];13 -> 20 [labeldistance=3, label = "2.06
-",fontsize=25, color=red, style=bold];21 [label="21_leaf\n26 (1.01%)\n",fillcolor="#92d28f",fontsize=20];14 -> 21 [labeldistance=3, label = "-0.04
-",fontsize=25, color=black, style=solid];22 [label="22_leaf\n95 (3.68%)\n",fillcolor="#53b466",fontsize=20];14 -> 22 [labeldistance=3, label = "2.18
-",fontsize=25, color=red, style=bold];23 [label="23_leaf\n19 (0.74%)\n",fillcolor="#a2d99c",fontsize=20];16 -> 23 [labeldistance=3, label = "-0.4
-",fontsize=25, color=red, style=bold];24 [label="24_leaf\n62 (2.4%)\n",fillcolor="#6abf71",fontsize=20];16 -> 24 [labeldistance=3, label = "0.49
-",fontsize=25, color=black, style=solid];25 [label="25_leaf\n17 (0.66%)\n",fillcolor="#a5db9f",fontsize=20];17 -> 25 [labeldistance=3, label = "-0.26
-",fontsize=25, color=black, style=solid];26 [label="26_leaf\n63 (2.44%)\n",fillcolor="#68be70",fontsize=20];17 -> 26 [labeldistance=3, label = "0.6
-",fontsize=25, color=red, style=bold];}
+",fontsize=25, color=black, style=solid];14 [label="14_CD71\n121 (4.69%)\n(1|2)",fillcolor="#ffccccff",fontsize=25];8 -> 14 [labeldistance=3, label = "2.88
+",fontsize=25, color=red, style=bold];15 [label="15_HLA-DR\n125 (4.84%)\n(1|2)",fillcolor="#ffccccff",fontsize=25];9 -> 15 [labeldistance=3, label = "0.41
+-0.41
+",fontsize=25, color=black, style=solid];16 [label="16_leaf\n54 (2.09%)\n",fillcolor="#72c375",fontsize=20];9 -> 16 [labeldistance=3, label = "-0.58
+0.26
+",fontsize=25, color=red, style=bold];17 [label="17_leaf\n40 (1.55%)\n",fillcolor="#7fc97f",fontsize=20];13 -> 17 [labeldistance=3, label = "-0.54
+",fontsize=25, color=black, style=solid];18 [label="18_leaf\n59 (2.29%)\n",fillcolor="#6dc072",fontsize=20];13 -> 18 [labeldistance=3, label = "2.06
+",fontsize=25, color=red, style=bold];19 [label="19_leaf\n26 (1.01%)\n",fillcolor="#92d28f",fontsize=20];14 -> 19 [labeldistance=3, label = "-0.04
+",fontsize=25, color=black, style=solid];20 [label="20_leaf\n95 (3.68%)\n",fillcolor="#53b466",fontsize=20];14 -> 20 [labeldistance=3, label = "2.18
+",fontsize=25, color=red, style=bold];21 [label="21_CD931\n58 (2.25%)\n(1|2)",fillcolor="#ffccccff",fontsize=25];15 -> 21 [labeldistance=3, label = "-0.68
+",fontsize=25, color=red, style=bold];22 [label="22_CD11b\n67 (2.6%)\n(1|2)",fillcolor="#ffccccff",fontsize=25];15 -> 22 [labeldistance=3, label = "1.36
+",fontsize=25, color=black, style=solid];23 [label="23_leaf\n43 (1.67%)\n",fillcolor="#7cc87c",fontsize=20];21 -> 23 [labeldistance=3, label = "-0.0
+",fontsize=25, color=red, style=bold];24 [label="24_leaf\n15 (0.58%)\n",fillcolor="#aadda4",fontsize=20];21 -> 24 [labeldistance=3, label = "1.05
+",fontsize=25, color=black, style=solid];25 [label="25_leaf\n17 (0.66%)\n",fillcolor="#a5db9f",fontsize=20];22 -> 25 [labeldistance=3, label = "-0.39
+",fontsize=25, color=red, style=bold];26 [label="26_leaf\n50 (1.94%)\n",fillcolor="#75c477",fontsize=20];22 -> 26 [labeldistance=3, label = "0.48
+",fontsize=25, color=black, style=solid];}
