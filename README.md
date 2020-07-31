@@ -1,10 +1,16 @@
 # CITE-sort
 
+<img src="readme_figs/CITE-sort.png" width = "35%"   height = "70%"  alt="CITE-sort" align=left /> 
+
+
+
+
+
+
+
+
+
 An artificial-cell-type aware surface marker clustering method for CITE-seq data. 
-
-<img src="readme_figs/CITE-sort.png" width = "35%"   height = "70%"  alt="CITE-sort" align=left />
-
-
 
 ## Description
 
