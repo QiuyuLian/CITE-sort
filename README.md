@@ -2,11 +2,7 @@
 
 An artificial-cell-type aware surface marker clustering method for CITE-seq data. 
 
-<div align="left">
-  <img src="readme_figs/CITE-sort.png" align="left" style="zoom:45%;float:left;">
-</div>
-
-
+<img src="readme_figs/CITE-sort.png" width = "35%"   height = "70%"  alt="CITE-sort" align=left />
 
 ## Description
 
